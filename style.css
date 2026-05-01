@@ -575,7 +575,7 @@ h3 {
   .campus-col,
   .facilities-col,
   .testimonials-col {
-    width: 100%;
+    width: 115%;
     margin-bottom: 20px;
   }
 
@@ -585,5 +585,49 @@ h3 {
 
   .text-box h1 {
     font-size: 30px;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 20px;
+  color: black;
+  cursor: pointer;
+}
+.open-btn,
+.close-btn {
+  display: none;
+}
+@media (max-width: 700px) {
+  .open-btn {
+    display: block;
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  .close-btn {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    position: fixed;
+    background: black;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -250px;
+    transition: 0.3s;
+  }
+
+  #menu-toggle:checked ~ .nav-links {
+    right: 0;
   }
 }
