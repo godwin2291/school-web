@@ -27,7 +27,7 @@ nav {
 }
 
 nav img {
-  width: 120px;
+  width: 200px;
 }
 
 #menu-toggle {
@@ -173,6 +173,7 @@ p {
 
 .row {
   margin: 5%;
+  gap: 30px;
   display: flex;
   justify-content: space-around;
 }
@@ -199,7 +200,7 @@ h3 {
 }
 
 .campus {
-  width: 80%;
+  width: 100%;
   margin: auto;
   text-align: center;
   padding-top: 50px;
@@ -212,7 +213,7 @@ h3 {
   overflow: hidden;
 }
 .campus-col img {
-  width: 100%;
+  width: 110%;
   display: block;
 }
 .layer {
@@ -287,12 +288,15 @@ h3 {
   padding: 25px;
   cursor: pointer;
   display: flex;
+  align-items: center;
 }
 .testimonials-col img {
   height: 40px;
   border-radius: 50%;
   margin-right: 30px;
   margin-left: 5px;
+  width: 40px;
+  height: 40px;
 }
 .testimonials-col p {
   padding: 0;
@@ -373,7 +377,7 @@ h3 {
   padding: 30px 2px;
 }
 .about-col img {
-  width: 100%;
+  width: 120%;
 }
 .about-col h1 {
   padding: 0%;
@@ -569,13 +573,15 @@ h3 {
 @media (max-width: 700px) {
   .row {
     flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .course-col,
   .campus-col,
   .facilities-col,
   .testimonials-col {
-    width: 115%;
+    width: 100%;
     margin-bottom: 20px;
   }
 
@@ -608,12 +614,11 @@ h3 {
   }
 
   .close-btn {
-    display: block;
+    display: none;
     position: absolute;
     top: 20px;
     right: 20px;
     font-size: 30px;
-    color: white;
     cursor: pointer;
   }
 
@@ -629,5 +634,98 @@ h3 {
 
   #menu-toggle:checked ~ .nav-links {
     right: 0;
+  }
+}
+@media (max-width: 700px) {
+  body {
+    text-align: center;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text-box,
+  .course,
+  .campus,
+  .facilities,
+  .testimonials,
+  .about-us,
+  .contact-us,
+  .blog-content {
+    text-align: center;
+    margin: auto;
+  }
+
+  .course-col,
+  .campus-col,
+  .testimonials-col {
+    width: 100%;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  .course-col img,
+  .campus-col img,
+  .facilities-col img,
+  .about-col img,
+  .blog-left img {
+    margin: 0 auto;
+    height: auto;
+    width: 90%;
+  }
+  .testimonials-col img {
+    max-width: 90%;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .text-box h1 {
+    font-size: 30px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav img {
+    margin: 0 auto;
+  }
+
+  .menu-icon {
+    display: block;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    position: fixed;
+    background: #0a2a66;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    padding-top: 60px;
+    text-align: left;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  #menu-toggle:checked ~ .nav-links {
+    right: 0;
+  }
+
+  .nav-links ul li {
+    display: block;
+    margin: 20px 0;
   }
 }
